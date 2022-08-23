@@ -3,10 +3,10 @@ const postModel = require('../models/postModel')
 
 
 const postAPost = async (req,res)=>{
-    const {email,title,costEstimate,description,category} = req.body
+    const {email,title,costEstimate,description,category,department} = req.body
 
     try{
-    const post = await postModel.create({email,costEstimate,title,description,category})
+    const post = await postModel.create({department,email,costEstimate,title,description,category})
     res.status(200).json(post)
     }
     catch(err){
