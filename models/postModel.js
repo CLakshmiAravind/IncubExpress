@@ -28,6 +28,10 @@ const postModel = new Schema({
     department:{
         type:String,
         required:true
+    },
+    domain:{
+        type:String,
+        required:true
     }
 },{timestamps:true})
 
